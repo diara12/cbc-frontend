@@ -1,6 +1,7 @@
-import axios from "axios";
+
+//import axios from "axios";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+//import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import ImageSlider from "../../components/imageSlider";
 import Loading from "../../components/loading";
@@ -44,7 +45,7 @@ export default function ProductOverviewPage() {
                                     })
                                 }
                             </h1>
-                            {/* product Id */}
+                            {/* product Id */} 
                             <h1 className="w-full text-center my-2 text-md text-gray-600 font-semibold">{product.productId}</h1>
                             <p className="w-full text-center my-2 text-md text-gray-600 font-semibold">{product.description}</p>
                             {
@@ -77,3 +78,4 @@ export default function ProductOverviewPage() {
 		</>
 	);
 }
+
