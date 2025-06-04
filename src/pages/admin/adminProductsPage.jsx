@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { sampleProducts } from "../../assets/sampleData"
-//import axios from "axios";
+import axios from "axios";
 
 export default function AdminProductsPage(){
 
     const [products, setProducts] = useState([sampleProducts])
 
-    /* useEffect(
+     useEffect(
         ()=> {
             axios.get(import.meta.env.VITE_BACKEND_URL + "/api/products").then((res) => {
                 console.log(res.data)
@@ -15,7 +15,6 @@ export default function AdminProductsPage(){
         }
             ,[]
         );
-    */
 
     return(
         <div className="w-full h-full bg-red-400 max-h-full overflow-y-scroll relative">
