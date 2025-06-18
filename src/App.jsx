@@ -8,11 +8,13 @@ import AdminPage from './pages/adminPage'
 import RegisterPage from './pages/register'
 import TestPage from './pages/testPage'
 import { Toaster } from 'react-hot-toast'
+import CartPage from './pages/client/cart'
 
 function App() {
  
 
   return (
+    
     <BrowserRouter>
       <div >
         <Toaster position='top-right'/>
@@ -23,6 +25,7 @@ function App() {
           <Route path="/signup" element={<RegisterPage/>}/>   
           <Route path='/admin/*' element={<AdminPage/>}/>
           <Route path='/testing' element={<TestPage/>}/>
+          <Route path="/cart" element={<CartPage/>}/>
           <Route path='/*' element={<h1>404 Not Found</h1>}/>
         </Routes>
       </div>

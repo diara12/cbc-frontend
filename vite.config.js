@@ -6,3 +6,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()], 
 })
+
+//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 - client secret
