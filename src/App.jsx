@@ -11,6 +11,8 @@ import { Toaster } from 'react-hot-toast'
 import RegisterPage from './pages/register'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import ForgetPasswordPage from './pages/client/forgetPassword'
+import CartPage from './pages/client/cart'
+import CheckoutPage from './pages/client/checkOut'
 
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
           <Route path="/testing" element={<TestPage/>}/>
           <Route path='/admin/*' element={<AdminPage/>}/>
           <Route path='/*' element={<HomePage/>}/>
+          <Route path="/register" element={<RegisterPage/>}/>
+          <Route path="/cart" element={<CartPage/>}/>
+          <Route path="/checkout" element={<CheckoutPage/>}/>
         </Routes>
       </div>
     </BrowserRouter>

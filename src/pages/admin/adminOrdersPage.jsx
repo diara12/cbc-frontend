@@ -8,7 +8,7 @@ export default function AdminOrdersPage() {
 	const [orders, setOrders] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [activeOrder, setActiveOrder] = useState(null);
+	const [activeOrder, setActiveOrder] = useState(null); //in the modal, the present order to be shown
 
 	useEffect(() => {
 		if (isLoading) {
@@ -232,7 +232,7 @@ export default function AdminOrdersPage() {
 								<tr
 									key={index}
 									onClick={() => {
-										setActiveOrder(order);
+										setActiveOrder(order); //when any table row selected the index changes to the tht.
 										setIsModalOpen(true);
 									}}
 									className={`cursor-pointer ${

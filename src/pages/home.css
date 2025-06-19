@@ -1,0 +1,149 @@
+:root {
+  --color-primary: #FBFBFB;
+  --color-secondary: #393E46;
+  --color-accent: #C5BAFF;
+}
+
+.homepage {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* HERO SECTION WITH BG IMAGE */
+.hero-banner {
+  background-image: url('/public/bg-home.jpg'); /* Replace with your own image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease 0.3s;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.6); /* soft white overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 700px;
+  padding: 2rem;
+  color: var(--color-secondary);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b5a8f0;
+}
+
+/* FADE-IN TRANSITION */
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.about-business {
+  max-width: 900px;
+  margin: 3rem auto 5rem;
+  padding: 0 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.about-business h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 3rem;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.vision-mission {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+.vision, .mission {
+  background: #f5f5ff; /* subtle pastel */
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  flex: 1 1 320px;
+  box-shadow: 0 16px 30px rgba(197, 186, 255, 0.25);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.vision:hover, .mission:hover {
+  transform: translateY(-10px);
+}
+
+.vision h3, .mission h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+
+.vision p, .mission p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-secondary);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 720px) {
+  .vision-mission {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
