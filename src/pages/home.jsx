@@ -1,73 +1,76 @@
-import { Route, Routes, Link } from "react-router-dom";
-import Header from "../components/header";
-import ProductOverviewPage from "./client/productOverview";
-import CartPage from "./client/cart";
-import SearchProductsPage from "./client/searchProducts";
-import ProductPage from "./client/productPage";
+import { Link } from "react-router-dom";
 import "./home.css";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState("SAFE");
+
+  const pillars = [
+    {
+      title: "SAFE",
+      text: "Our products are dermatologically tested and completely safe for all skin types.",
+      img: "public/safe.jpg",
+    },
+    {
+      title: "NATURAL",
+      text: "Crafted with carefully chosen natural ingredients to nourish your skin.",
+      img: "public/natural.png",
+    },
+    {
+      title: "ORGANIC",
+      text: "Free from harsh chemicals, made with organically sourced ingredients.",
+      img: "public/organic.png",
+    },
+  ];
+
   return (
     <div className="homepage">
-      <Header />
 
-      <div className="page-content">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <section className="hero-banner">
-                  <div className="overlay">
-                    <div className="hero-text fade-in">
-                      <h1>Welcome to Crystal Beauty Clear</h1>
-                      <p>
-                        Discover clean, conscious, radiant beauty. Glow naturally with curated
-                        cosmetics.
-                      </p>
-                      <Link to="/products" className="cta-button">
-                        Shop Collection
-                      </Link>
-                    </div>
-                  </div>
-                </section>
+      {/* Hero Section */}
+      <section className="hero-banner">
+        <div className="overlay">
+          <div className="hero-text fade-in">
+            <h1>Welcome to Crystal Beauty Clear</h1>
+            <p>
+              Discover clean, conscious, radiant beauty. Glow naturally with curated
+              cosmetics.
+            </p>
+            <Link to="/products" className="cta-button">
+              Shop Collection
+            </Link>
+          </div>
+        </div>
+      </section>
 
-                <section className="about-business section-padding">
-                  <h2>Our Vision & Mission</h2>
+      {/* Pillars Section */}
+      <section className="pillars-section">
+        <div className="pillars-wrapper">
+          {/* Left Image */}
+          <div className="pillar-image">
+            <img src={pillars.find(p => p.title === activeTab).img} alt={activeTab} />
+          </div>
 
-                  <div className="vision-mission">
-                    <div className="vision">
-                      <h3>Our Vision</h3>
-                      <p>
-                        To redefine beauty by empowering every individual to express their natural
-                        radiance through clean, ethical, and innovative cosmetics.
-                      </p>
-                    </div>
+          {/* Right Tabs */}
+          <div className="pillar-tabs">
+            {pillars.map((pillar, index) => (
+              <div
+                key={pillar.title}
+                className={`pillar-tab ${activeTab === pillar.title ? "active" : ""}`}
+                onClick={() => setActiveTab(pillar.title)}
+              >
+                <span className="pillar-number">0{index + 1}</span>
+                <span className="pillar-title">{pillar.title}</span>
+              </div>
+            ))}
 
-                    <div className="mission">
-                      <h3>Our Mission</h3>
-                      <p>
-                        We commit to crafting sustainable and cruelty-free products, sourcing
-                        premium natural ingredients, and fostering transparency that inspires
-                        self-love and confidence.
-                      </p>
-                    </div>
-                  </div>
-                </section>
-              </>
-            }
-          />
+            {/* Description */}
+            <p className="pillar-description">
+              {pillars.find(p => p.title === activeTab).text}
+            </p>
+          </div>
+        </div>
+      </section>
 
-          {/* Other Routes */}
-          <Route path="/products" element={<ProductPage />} />
-          <Route path="/about" element={<h1>About</h1>} />
-          <Route path="/contact" element={<h1>Contact</h1>} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/overview/:id" element={<ProductOverviewPage />} />
-          <Route path="/search" element={<SearchProductsPage />} />
-          <Route path="*" element={<h1>404 Not Found</h1>} />
-        </Routes>
-      </div>
     </div>
   );
 }

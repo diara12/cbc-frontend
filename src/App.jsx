@@ -13,6 +13,11 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import ForgetPasswordPage from './pages/client/forgetPassword'
 import CartPage from './pages/client/cart'
 import CheckoutPage from './pages/client/checkOut'
+import ProductPage from './pages/client/productPage'
+import SearchProductsPage from './pages/client/searchProducts'
+import ProductOverviewPage from './pages/client/productOverview'
+import AboutPage from './pages/client/about'
+import Footer from './components/footer'
 
 
 function App() {
@@ -23,18 +28,27 @@ function App() {
     <BrowserRouter>
       <div >
         <Toaster position='top-right'/>
-        {/* <Header/> */}
-        <Routes path="/*">
+        <Header />
+        {/* Main Routes */}
+        <Routes>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path="/forget" element={<ForgetPasswordPage/>}/>
           <Route path="/signup" element={<RegisterPage/>}/>
           <Route path="/testing" element={<TestPage/>}/>
           <Route path='/admin/*' element={<AdminPage/>}/>
-          <Route path='/*' element={<HomePage/>}/>
+          <Route path='/' element={<HomePage/>}/>
           <Route path="/register" element={<RegisterPage/>}/>
-          <Route path="/cart" element={<CartPage/>}/>
           <Route path="/checkout" element={<CheckoutPage/>}/>
+          {/* Other Routes */}
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/contact" element={<h1>Contact</h1>} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/overview/:id" element={<ProductOverviewPage />} />
+          <Route path="/search" element={<SearchProductsPage />} />
+          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
    </GoogleOAuthProvider>
