@@ -8,18 +8,18 @@ export default function HomePage() {
   const pillars = [
     {
       title: "SAFE",
-      text: "Our products are dermatologically tested and completely safe for all skin types.",
-      img: "public/safe.jpg",
+      text: "Our products are dermatologically tested and completely safe for all skin types. We ensure every formula goes through rigorous testing so you can trust what you put on your skin every day.",
+      img: "/safe.jpg",
     },
     {
       title: "NATURAL",
-      text: "Crafted with carefully chosen natural ingredients to nourish your skin.",
-      img: "public/natural.png",
+      text: "Crafted with carefully chosen natural ingredients to nourish and rejuvenate your skin. We believe in the power of nature — every product is enriched with botanical extracts and essential vitamins.",
+      img: "/natural.png",
     },
     {
       title: "ORGANIC",
-      text: "Free from harsh chemicals, made with organically sourced ingredients.",
-      img: "public/organic.png",
+      text: "Free from harsh chemicals, made with organically sourced ingredients that are ethically grown and sustainably harvested. Experience pure skincare that’s kind to your skin and to the planet.",
+      img: "/organic.png",
     },
   ];
 

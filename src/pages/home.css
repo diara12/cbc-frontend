@@ -175,59 +175,61 @@
   font-size: 16px;
 }
 
+/* Pillars Section */
 .pillars-section {
-  padding: 80px 20px;
-  background: #f9f9f9;
+  min-height: 90vh; /* make it almost full-screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  background: #fff3f5;
 }
 
 .pillars-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .pillar-image img {
-  width: 250px;
-  height: 200px;
-  border-radius: 12px;
-  object-fit: cover;
+  width: 450px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .pillar-tabs {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  flex: 1;
+  justify-content: flex-start;
 }
 
 .pillar-tab {
+  font-size: 24px;
+  margin: 15px 0;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #555;
-  transition: color 0.3s;
+  gap: 15px;
+  transition: color 0.3s ease;
 }
 
 .pillar-tab.active {
-  color: #000;
-}
-
-.pillar-number {
-  font-weight: normal;
-  color: #d3d3c0;
+  font-weight: bold;
+  color: #d89a9a; /* highlight active */
 }
 
 .pillar-description {
-  margin-top: 20px;
-  font-size: 1rem;
+  margin-top: 30px;
+  font-size: 22px; /* bigger font */
+  line-height: 1.8;
   color: #333;
-  line-height: 1.6;
+  max-width: 600px;
 }
+
 
 
