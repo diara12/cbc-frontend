@@ -3,6 +3,7 @@ import AddProductPage from "./admin/addProductPage";
 import AdminProductsPage from "./admin/productsPage";
 import AdminOrdersPage from "./admin/adminOrdersPage";
 import EditProductPage from "./admin/editProductPage";
+import UsersPage from "./admin/userPage";
 //import AdminOrdersPage from "./admin/adminOrdersPage";
 
 export default function AdminPage(){
@@ -28,7 +29,7 @@ export default function AdminPage(){
             <div className="h-full w-[calc(100%-300px)] border-accent border-4 rounded-xl bg-white">
                 <Routes path="/*">
                     <Route path="/products" element={<AdminProductsPage/>}/>
-                    <Route path="/users" element={<h1>Users</h1>}/>
+                    <Route path="/users" element={<UsersPage/>}/>
                     <Route path="/orders" element={<AdminOrdersPage/>}/>
                     <Route path="/reviews" element={<h1>Reviews</h1>}/>
                     <Route path="/add-product" element={<AddProductPage/>}/>

@@ -37,29 +37,29 @@ export default function RegisterPage() {
                         onChange={(e) => setFirstName(e.target.value)}
                         value={firstName}
                         placeholder="First Name"
-                        className="w-[300px] h-[50px] border border-[#c3efe9] rounded-[20px] my-[10px] px-4"
+                        className="w-[300px] h-[50px] border border-[#717982] rounded-[20px] my-[10px] px-4"
                     />
                     <input
                         onChange={(e) => setLastName(e.target.value)}
                         value={lastName}
                         placeholder="Last Name"
-                        className="w-[300px] h-[50px] border border-[#c3efe9] rounded-[20px] my-[10px] px-4"
+                        className="w-[300px] h-[50px] border border-[#717982] rounded-[20px] my-[10px] px-4"
                     />
                     <input
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                         placeholder="Email"
-                        className="w-[300px] h-[50px] border border-[#c3efe9] rounded-[20px] my-[10px] px-4"
+                        className="w-[300px] h-[50px] border border-[#717982] rounded-[20px] my-[10px] px-4"
                     />
                     <input
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         type="password"
                         placeholder="Password"
-                        className="w-[300px] h-[50px] border border-[#c3efe9] rounded-[20px] my-[10px] px-4"
+                        className="w-[300px] h-[50px] border border-[#717982] rounded-[20px] my-[10px] px-4"
                     />
 
-                    <button onClick={handleRegister} className="w-[300px] h-[50px] bg-[#c3efe9] rounded-[20px] my-[20px] text-[20px] font-bold text-white cursor-pointer">
+                    <button onClick={handleRegister} className="w-[300px] h-[50px] bg-[#ffa4d4] rounded-[20px] my-[20px] text-[20px] font-bold text-white cursor-pointer">
                         Register
                     </button>
                 </div>
