@@ -54,7 +54,7 @@ export default function CheckoutPage() {
 				productId: cart[i].productId,
 				qty: cart[i].qty,
 			};
-			orderInformation.products[i] = item; //to get the products from cart to backend
+			orderInformation.products[i] = item;
 		}
 		try {
 			const res = await axios.post(

@@ -43,8 +43,7 @@ export default function AdminReviewsPage() {
               {reviews.map((review) => (
                 <tr key={review._id} className="hover:bg-gray-50">
                   <td className="border border-gray-300 px-4 py-2">
-                    {review.productId?.name || "Unknown"} <br />
-                    <span className="text-sm text-gray-500">{review.productId?.productId}</span>
+                    {review.productId || "Unknown"} <br />
                   </td>
                   <td className="border border-gray-300 px-4 py-2">{review.name}</td>
                   <td className="border border-gray-300 px-4 py-2 text-yellow-500">
