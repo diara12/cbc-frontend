@@ -1,6 +1,6 @@
 .footer {
   background-color: #6a2d57;
-  padding: 20px 10px 10px;
+  padding: 14px 10px 8px;
   font-family: inherit;
   color: #f0f0f0; /* light color for text */
 }
@@ -20,34 +20,36 @@
 }
 
 .footer-logo {
-  font-size: 45px;
-  letter-spacing: 10px;
+  font-size: 30px;
+  letter-spacing: 4px;
   color: #f0c971; /* lighter gold accent */
   font-family: serif;
   font-weight: 600;
 }
 
 .footer-contact {
-  margin: 32px 0 10px 0;
+  margin: 14px 0 8px 0;
+  font-size: 14px;
+  line-height: 1.45;
   color: #ccc; /* softer light text */
 }
 
 .footer-social-icons {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1.5px solid #f0c971;
   background: transparent;
-  font-size: 1.4em;
+  font-size: 1.05em;
   color: #f0c971;
   transition: background 0.2s ease;
   text-decoration: none;
@@ -64,11 +66,11 @@
 }
 
 .footer-subscribe-title {
-  font-size: 2.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: #f0f0f0;
   line-height: 1.1;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
 }
 
 .subscribe-form {
@@ -83,9 +85,9 @@
   flex: 1;
   border: none;
   background: transparent;
-  padding: 12px 0;
+  padding: 8px 0;
   outline: none;
-  font-size: 1rem;
+  font-size: 0.92rem;
   color: #f0f0f0;
 }
 
@@ -97,9 +99,9 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #f0c971;
-  margin-left: 12px;
+  margin-left: 8px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -111,11 +113,11 @@
 
 .footer-bottom {
   border-top: 1px solid #444;
-  margin-top: 45px;
-  padding: 18px 20px 8px;
+  margin-top: 20px;
+  padding: 12px 10px 6px;
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
   color: #bbb;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -132,8 +134,8 @@
 .footer-shipping-payment {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-top: 8px;
+  gap: 20px;
+  margin-top: 4px;
 }
 
 .footer-shipping,
@@ -144,8 +146,30 @@
 }
 
 .placeholder-icon {
-  margin-left: 6px;
+  margin-left: 4px;
   opacity: 0.7;
   user-select: none;
   color: #f0c971;
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .footer-subscribe-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .footer-container {
+    gap: 14px;
+  }
+
+  .footer-right,
+  .footer-left {
+    min-width: 100%;
+  }
 }

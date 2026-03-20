@@ -25,26 +25,28 @@ function AppContent() {
   const hideHeaderFooter2 = location.pathname === "/register";
 
   return (
-    <div>
+    <div className='min-h-screen flex flex-col'>
       <Toaster position='top-right'/>
       {!hideHeaderFooter && !hideHeaderFooter2 && <Header />}
-      <Routes>
-        <Route path='/login' element={<LoginPage/>}/>
-        <Route path="/forget" element={<ForgetPasswordPage/>}/>
-        <Route path="/signup" element={<RegisterPage/>}/>
-        <Route path="/testing" element={<TestPage/>}/>
-        <Route path='/admin/*' element={<AdminPage/>}/>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path="/register" element={<RegisterPage/>}/>
-        <Route path="/checkout" element={<CheckoutPage/>}/>
-        <Route path="/products" element={<ProductPage />} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/overview/:id" element={<ProductOverviewPage />} />
-        <Route path="/search" element={<SearchProductsPage />} />
-        <Route path="/about" element={<AboutPage/>}/>
-        <Route path="*" element={<h1>404 Not Found</h1>} />
-      </Routes>
+      <main className='flex-1'>
+        <Routes>
+          <Route path='/login' element={<LoginPage/>}/>
+          <Route path="/forget" element={<ForgetPasswordPage/>}/>
+          <Route path="/signup" element={<RegisterPage/>}/>
+          <Route path="/testing" element={<TestPage/>}/>
+          <Route path='/admin/*' element={<AdminPage/>}/>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path="/register" element={<RegisterPage/>}/>
+          <Route path="/checkout" element={<CheckoutPage/>}/>
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/overview/:id" element={<ProductOverviewPage />} />
+          <Route path="/search" element={<SearchProductsPage />} />
+          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
+      </main>
       {!hideHeaderFooter && !hideHeaderFooter2 && <Footer />}
     </div>
   );
