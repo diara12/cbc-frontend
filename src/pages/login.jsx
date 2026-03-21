@@ -3,7 +3,7 @@ import axios from "axios"
 import { useState } from "react"
 import toast from "react-hot-toast"
 import { GrGoogle } from "react-icons/gr"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function LoginPage(){
 
@@ -90,6 +90,16 @@ export default function LoginPage(){
                     <GrGoogle className="text-xl text-white" />
                     <span>Login with Google</span>
                 </button>
+
+                <div className="mt-2 flex items-center gap-2 text-white">
+                    <span>No account?</span>
+                    <Link
+                        to="/register"
+                        className="underline font-semibold hover:text-[#ffe7e7] transition"
+                    >
+                        Sign Up
+                    </Link>
+                </div>
             </div>
           </div>
         </div>
